@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    function:
+      definition: function|sink
+    stream:
+      function:
+        bindings:
+          function|sink-in-0: input
+          function|sink-out-0: output
+      bindings:
+        #### The output bindings for AP statistic and status report.
+        input:
+          content-type: application/x-protobuf;charset=UTF-8
+        output:
+          content-type: application/x-protobuf;charset=UTF-8
